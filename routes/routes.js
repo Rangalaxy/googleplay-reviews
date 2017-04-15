@@ -14,13 +14,6 @@ var appRouter = function(app) {
 
 });
 
- app.post("/account", function(req, res) {
-    if(!req.body.username || !req.body.password || !req.body.twitter) {
-        return res.send({"status": "error", "message": "missing a parameter"});
-    } else {
-        return res.send(req.body);
-    }
-});
 }
 
 module.exports = appRouter;
